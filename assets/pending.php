@@ -13,7 +13,7 @@ if (isset($_POST['treat'])) {
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-			header("Location: totalrequest.php");
+			header("Location: pending.php");
 	} else {
 			$deleteCusErrorMsg = 'Unable to delete customer';
 	}
@@ -26,7 +26,7 @@ if (isset($_POST['reject'])) {
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-			header("Location: totalrequest.php");
+			header("Location: pending.php");
 	} else {
 			$deleteCusErrorMsg = 'Unable to delete customer';
 	}
@@ -38,7 +38,7 @@ if (isset($_POST['delete'])) {
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-			header("Location: totalrequest.php");
+			header("Location: pending.php");
 	} else {
 			$deleteCusErrorMsg = 'Unable to delete customer';
 	}

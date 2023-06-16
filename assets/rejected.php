@@ -5,31 +5,7 @@ include 'global.php';
 $requests =array_filter($requests, 'calculateRejected');
 $requests = array_values($requests);
 
-if (isset($_POST['treat'])) {
-	$id = $_POST['id'];
 
-	$query = "UPDATE `requests` SET `status`='treated' WHERE `requests`.`id` = $id";
-	$result = mysqli_query($conn, $query);
-
-	if ($result) {
-			header("Location: totalrequest.php");
-	} else {
-			$deleteCusErrorMsg = 'Unable to delete customer';
-	}
-}
-
-if (isset($_POST['reject'])) {
-	$id = $_POST['id'];
-
-	$query = "UPDATE `requests` SET `status`='rejected' WHERE `requests`.`id` = $id";
-	$result = mysqli_query($conn, $query);
-
-	if ($result) {
-			header("Location: totalrequest.php");
-	} else {
-			$deleteCusErrorMsg = 'Unable to delete customer';
-	}
-}
 if (isset($_POST['delete'])) {
 	$id = $_POST['id'];
 
@@ -37,7 +13,7 @@ if (isset($_POST['delete'])) {
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-			header("Location: totalrequest.php");
+			header("Location: rejected.php");
 	} else {
 			$deleteCusErrorMsg = 'Unable to delete customer';
 	}
