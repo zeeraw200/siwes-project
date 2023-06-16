@@ -1,0 +1,532 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --dark-white: rgb(242, 242, 242);
+  --pale-black: rgb(20, 20, 20);
+  --black: rgb(0, 0, 0);
+  --pale-red: rgb(240, 210, 210);
+  --red: rgb(255, 0, 0);
+  --dark-red: rgb(252, 17, 17);
+  --dim-red: rgb(180, 0, 0);
+  --pale-grey: rgb(201, 199, 199);
+  --grey: rgb(104, 103, 103);
+  --dark-grey: rgb(44, 43, 43);
+  --dim-grey: rgb(33, 33, 39);
+  --black-blue: rgb(20, 20, 24);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* TOP AREA  */
+.top {
+  height: 86px;
+  width: 100%;
+}
+
+/* LOGO IMAGE  */
+.logo {
+  display: inline-block;
+  padding: 15px 0 15px 70px;
+}
+
+/* ADMIN BUTtON  */
+.admin {
+  display: inline-block;
+  position: absolute;
+  top: 35px;
+  right: 100px;
+}
+
+.admin a {
+  background-color: var(--pale-red);
+  border: 1px solid var(--red);
+  border-radius: 5px;
+  padding: 12px 20px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.admin a:hover {
+  background-color: var(--red);
+  color: var(--white);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+/* NAV BAR  */
+nav {
+  /* overflow: hidden; */
+  background-color: var(--grey);
+}
+
+nav a {
+  float: left;
+  width: 33.33%;
+  color: var(--dark-white);
+  padding: 15px 16px;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: var(--pale-grey);
+  color: rgb(0, 0, 0);
+}
+
+nav::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* SECTION/ BODY CONTENT  */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.927), rgba(0, 0, 0, 0.7)),
+    url('../img/digital-ecosystem_Tavola-disegno-1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+  width: 100%;
+}
+
+/* HERO IMAGE  */
+.content {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 90px;
+  width: 600px;
+  display: block;
+}
+
+/* HERO TEXT  */
+.herotext {
+  color: var(--white);
+}
+
+.herotext h1 {
+  font-size: 400%;
+  padding-bottom: 25px;
+}
+
+.hero p {
+  font-size: 120%;
+}
+
+/* BUTTON */
+.buttons {
+  padding: 30px 0;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* LEFT BUTTON  */
+.lt {
+  background-color: var(--dark-red);
+}
+
+.lt:hover {
+  background-color: var(--pale-black);
+}
+
+/* RIGHT BUTTON  */
+.rt {
+  margin-left: 10px;
+  background-color: transparent;
+  border: 1px solid var(--grey);
+}
+
+.rt:hover {
+  background-color: var(--red);
+  border: none;
+}
+
+button a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+/* SHOW CASE SECTION  */
+#showcase {
+  background-color: var(--dark-white);
+  height: 230px;
+  width: 100%;
+}
+
+.showcontent {
+  position: absolute;
+  margin-top: 20px;
+  /* border: 1px solid green; */
+  width: 100%;
+}
+
+.ourclient {
+  font-size: 12px;
+  width: 100px;
+  text-align: center;
+  padding: 10px 5px;
+  margin: auto;
+  margin-top: 30px;
+  color: #2c2b2b;
+  background-color: var(--pale-grey);
+  border: 1px solid var(--grey);
+  border-radius: 20px;
+}
+.ourclient:hover {
+  color: var(--dark-white);
+  background-color: var(--dark-red);
+  border: none;
+}
+
+/* CLIENT COMPANY LOGO */
+.clientcomp {
+  width: 100%;
+  margin-top: 40px;
+}
+
+.logos {
+  width: 87%;
+  margin: auto;
+}
+
+.logos > img {
+  height: 60px;
+  width: 14.38%;
+  padding-left: 30px;
+}
+
+/* SHOWCASING INDUSTRIES  */
+.industries {
+  width: 100%;
+  height: 700px;
+  background-color: var(--white);
+}
+
+.showcaseindustry {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.ourindustry {
+  width: 130px;
+  font-size: 80%;
+  text-align: center;
+  padding: 5px 10px;
+  margin: auto;
+  margin-top: 50px;
+  color: var(--dim-red);
+  background-color: var(--pale-red);
+  border: 1px solid var(--red);
+  border-radius: 20px;
+}
+
+.industcontent {
+  padding-top: 20px;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* POP UP DIVS */
+.work {
+  width: 85%;
+  padding-top: 50px;
+  margin: auto;
+}
+
+.serve {
+  display: none;
+  margin: 0 -1.8px;
+  border: 1px solid var(--dark-white);
+  display: inline-block;
+  width: 33%;
+  height: 200px;
+}
+
+/* PAGE ICONS  */
+.serve i {
+  font-size: 40px;
+  color: var(--dark-red);
+  margin: 30px 0 5px 0;
+  padding: 20px 30px 20px 30px;
+}
+
+.serve p {
+  font-size: 150%;
+  font-weight: 700;
+  padding: 0 30px;
+  display: block;
+}
+.serve:hover {
+  box-shadow: 10px 7px 35px var(--dark-white);
+}
+
+/* FOOTER  */
+footer {
+  /* height: 600px; */
+  background-color: var(--black-blue);
+  color: #c9c7c7;
+  padding-top: 60px;
+}
+
+.footcont {
+  margin: auto;
+  /* height: 500px; */
+  width: 90%;
+  display: flex;
+}
+
+/* LEFT & RIGHT SIDE OF THE FOOTER  */
+.cont {
+  width: 50%;
+  /* height: 200px; */
+}
+
+/* LEFT SIDE OF THE FOOTER  */
+/* COMAPNY LOGO AND WRITE UP  */
+footer img {
+  width: 257px;
+  padding: 20px 0;
+}
+
+.companyprofile p {
+  width: 350px;
+  line-height: 25px;
+}
+
+/* SOCIAL MEDIA ICONS  */
+.social {
+  width: 500px;
+}
+
+.icons {
+  display: inline-block;
+  background-color: var(--dim-grey);
+  text-align: center;
+  padding: 8px 0;
+  margin: 15px 10px 0 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.icons i {
+  color: var(--white);
+}
+
+.icons:hover {
+  background-color: var(--red);
+}
+
+/* RIGHT SIDE OF THE FOOTER  */
+#contact {
+  color: var(--white);
+}
+
+#contact > h1 {
+  padding: 30px 20px;
+  font-size: 120%;
+}
+.location {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.location i {
+  font-size: 130%;
+  padding: 0 20px;
+  color: var(--red);
+}
+
+.address span {
+  color: var(--pale-grey);
+}
+
+.address p {
+  padding-bottom: 10px;
+}
+
+/* DIVIDING LINE  */
+.line {
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: var(--dim-grey);
+}
+
+/* COPY RIGHT  */
+.copyright {
+  font-weight: 100;
+  margin: auto;
+  padding-top: 30px;
+  height: 80px;
+  width: 90%;
+  display: flex;
+}
+
+.legal {
+  margin-left: 540px;
+  width: 280px;
+}
+
+.legal a {
+  color: var(--pale-grey);
+  text-decoration: none;
+}
+
+/* ADMIN LOGIN PAGE  */
+.adminlog {
+  position: relative;
+  height: 100vh;
+}
+
+/* FORM  */
+.form {
+  position: absolute;
+  padding: 20px;
+  margin-top: 50px;
+  left: 35%;
+  border: 1px solid var(--pale-grey);
+  border-radius: 30px;
+  box-shadow: 0 0 35px 10px var(--dark-white);
+  width: 35%;
+  text-align: center;
+}
+
+form h2 {
+  padding: 15px;
+}
+
+/* INPUTS  */
+.inputs input {
+  padding: 10px 30px;
+  width: 100%;
+  border: 2px solid var(--pale-grey);
+  border-radius: 10px;
+  margin: 10px 0;
+}
+.inputs {
+  margin: 15px;
+}
+/* .form input {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  border: 2px solid var(--pale-grey);
+  border-radius: 10px;
+  margin: 20px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid var(--grey);
+} */
+
+/* SUBMIT BUTTON  */
+/* input[type='submit'] {
+  font-weight: 700;
+  margin: auto;
+  width: 100px;
+  background-color: var(--pale-red);
+  border: 1px solid var(--red);
+  margin-bottom: 20px;
+}
+
+input[type='submit']:hover {
+  color: var(--white);
+  background-color: var(--red);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+} */
+
+/* TERMS AND CONDITION  */
+.tc {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  padding-left: 50px;
+}
+
+.tc a,
+form a {
+  text-decoration: none;
+}
+
+/* request page */
+section {
+  background-color: var(--dark-white);
+}
+.request-form {
+  height: 600px;
+  width: 1200px;
+}
+.request-form form {
+  height: 100%;
+  width: 50%;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+.form-content {
+  margin-top: 15px;
+  margin-left: 50px;
+}
+.form-content label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  /* padding: 10px; */
+}
+.form-content input {
+  height: 30px;
+  width: 400px;
+  padding: 15px;
+  margin: 12px;
+  border: 2px solid var(--pale-grey);
+  border-radius: 5px;
+  background-color: var(--dark-white);
+}
+
+.form-content select {
+  padding: 5px 20px;
+  background-color: var(--dark-white);
+  border: 1px solid var(--pale-grey);
+  border-radius: 5px;
+}
+.btn {
+  font-size: 16px;
+  background-color: var(--pale-red);
+  color: var(--black);
+  border: 1px solid var(--red);
+  margin-bottom: 15px;
+}
+.btn:hover {
+  background-color: var(--red);
+  color: var(--dark-white);
+}

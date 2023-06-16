@@ -1,0 +1,149 @@
+:root {
+  --white: rgb(255, 255, 255);
+  --dark-white: rgb(242, 242, 242);
+  --pale-black: rgb(20, 20, 20);
+  --black: rgb(0, 0, 0);
+  --pale-red: rgb(240, 210, 210);
+  --red: rgb(255, 0, 0);
+  --dark-red: rgb(252, 17, 17);
+  --dim-red: rgb(180, 0, 0);
+  --pale-grey: rgb(201, 199, 199);
+  --grey: rgb(104, 103, 103);
+  --dark-grey: rgb(44, 43, 43);
+  --dim-grey: rgb(33, 33, 39);
+  --black-blue: rgb(20, 20, 24);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* background-color: var(--white); */
+  font-family: 'Roboto', sans-serif;
+}
+
+.layout {
+  display: flex;
+}
+
+h2 {
+  text-transform: capitalize;
+}
+
+aside {
+  background: var(--dark-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0;
+  width: 15%;
+  height: 100vh;
+}
+aside > img {
+  display: block;
+  max-width: 82%;
+  margin: auto;
+}
+.logo {
+  margin-left: 15px;
+}
+
+nav {
+  margin-top: 60px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
+nav > * {
+  padding: 16px 20px;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+nav > *.active {
+  background-color: var(--dark-grey);
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: var(--white);
+  background-color: var(--dark-grey);
+}
+
+/* main section */
+.main-section {
+  width: 85%;
+  flex: 1;
+  padding: 32px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+/* pallet */
+.pallet--list {
+  gap: 17px;
+  width: 100%;
+  display: grid;
+  margin-bottom: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.pallet {
+  flex: 1;
+  width: 100%;
+  color: #fff;
+  flex-shrink: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 40px 20px;
+  position: relative;
+  border-radius: 15px;
+}
+.pallet:nth-child(1) {
+  background-color: #126da9;
+}
+.pallet:nth-child(2) {
+  background-color: var(--dim-grey);
+}
+.pallet:nth-child(3) {
+  background-color: var(--pale-grey);
+}
+.pallet:nth-child(4) {
+  background-color: var(--red);
+}
+.pallet h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  position: relative;
+  z-index: 2;
+}
+.pallet p {
+  font-size: 26px;
+  font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.pallet img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  max-height: 100px;
+}
+.pallet:nth-child(3) img {
+  max-height: 90px;
+}
