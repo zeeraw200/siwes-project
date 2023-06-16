@@ -5,14 +5,39 @@ include 'global.php';
 $requests =array_filter($requests, 'calculateTreated');
 $requests = array_values($requests);
 
-if (isset($_POST['id'])) {
+if (isset($_POST['treat'])) {
+	$id = $_POST['id'];
+
+	$query = "UPDATE `requests` SET `status`='treated' WHERE `requests`.`id` = $id";
+	$result = mysqli_query($conn, $query);
+
+	if ($result) {
+			header("Location: totalrequest.php");
+	} else {
+			$deleteCusErrorMsg = 'Unable to delete customer';
+	}
+}
+
+if (isset($_POST['reject'])) {
+	$id = $_POST['id'];
+
+	$query = "UPDATE `requests` SET `status`='rejected' WHERE `requests`.`id` = $id";
+	$result = mysqli_query($conn, $query);
+
+	if ($result) {
+			header("Location: totalrequest.php");
+	} else {
+			$deleteCusErrorMsg = 'Unable to delete customer';
+	}
+}
+if (isset($_POST['delete'])) {
 	$id = $_POST['id'];
 
 	$query = "DELETE FROM `requests` WHERE `requests`.`id` = $id";
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-			header("Location: treated.php");
+			header("Location: totalrequest.php");
 	} else {
 			$deleteCusErrorMsg = 'Unable to delete customer';
 	}
@@ -93,16 +118,24 @@ if (isset($_POST['id'])) {
 							<td><?php echo $request['message']; ?></td>
 							<td><?php echo $request['status']; ?></td>
               <td>
-                <div class="actions">
-                <?php if($request['status'] === 'pending'): ?>
-                      <form><button type="submit"><img src="../img/check.png" alt="" height="15px" width="15px"></button> </form>
-                    <form action=""><button type="submit"><img src="../img/close.png" alt="" height="15px" width="15px"></button></form>
-                    <?php endif ?>
-                    <form method="POST" action="pending.php" >
+                  <div class="actions">
+                      
+                    <?php if($request['status'] === 'pending'): ?>
+                      <form> </form>
+                    <form method="POST" action="totalrequest.php">
                       <input type="hidden" name="id" value="<?php echo $request['id']; ?>">
-                      <button type="submit"><img src="../img/delete.png" alt="" height="15px" width="15px"></button></form>
-                </div>
-              </td>
+                      <button type="submit" name="treat"><img src="../img/check.png" alt="" height="15px" width="15px"></button>
+                    </form>
+                      <form method="POST" action="totalrequest.php" >
+                        <input type="hidden" name="id" value="<?php echo $request['id']; ?>">
+                        <button type="submit" name="reject"><img src="../img/close.png" alt="" height="15px" width="15px"></button>
+                      </form>
+                    <?php endif ?>
+                    <form method="POST" action="totalrequest.php" >
+                      <input type="hidden" name="id" value="<?php echo $request['id']; ?>">
+                      <button type="submit" name='delete'><img src="../img/delete.png" alt="" height="15px" width="15px"></button></form>
+                  </div>
+                </td>
             </tr>
             <?php endforeach ?>
           
