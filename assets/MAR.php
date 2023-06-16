@@ -20,7 +20,7 @@ if (isset($_POST['submit-btn'])) {
 	$result = mysqli_query($conn, $query);
 
 	if ($result) {
-		echo "<script>alert('Thanks you for patronizing Africa prudential. we would get back to you via your email to know your request status.');</script>";
+		echo "<script>alert('Your request has been logged successfully. we would get back to via the email provided.');</script>";
 	} else {
     echo "<script>alert('Invalid request');</script>";
 	}
